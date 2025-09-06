@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Lausanne300';
+  src: url('/Fonts/Lausanne-300.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lausanne500';
+  src: url('/Fonts/Lausanne-500.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Classes */
+.l300 {
+  font-family: 'Lausanne300', sans-serif;
+}
+
+.l500 {
+  font-family: 'Lausanne500', sans-serif;
+}
+
+.videoclip{
+  overflow: hidden;
+}
+
+.marqu{
+  animation: move 4s linear infinite;
+  transition: all;
+}
+
+@keyframes move{
+  0%{transform: translateX(0);}
+  100%{transform: translateX(-50%);}
+}
+
