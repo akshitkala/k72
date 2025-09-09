@@ -14,7 +14,7 @@ const Footer = () => {
         return () => clearInterval(timer); // cleanup on unmount
       }, []);
   return (
-    <div className="footer w-full h-[100vh] md:h-[60vh] bg-black text-white relative">
+    <div className="footer w-full h-[100vh] md:h-[70vh] bg-black text-white relative mt-40">
       <div className="upper p-2 flex md:flex-row  flex-col gap-90 md:gap-0 justify-between">
         <div className="btns1 flex gap-1 md:gap-4 ">
           {["FB","IG","LN","TW"].map((item)=>{

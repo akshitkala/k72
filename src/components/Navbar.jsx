@@ -42,7 +42,19 @@ const Navbar = () => {
 
   useGSAP(() => {
     const item = document.querySelectorAll(".item");
-
+      window.addEventListener("wheel",(dets)=>{
+        // console.log(dets.deltaY)
+        if(dets.deltaY>0){
+          gsap.to(".smallnav",{
+            translateY:"-100%"
+          })
+        }
+        else{
+          gsap.to(".smallnav",{
+            translateY:"0%"
+          })
+        }
+      })
     item.forEach((el) => {
       el.addEventListener("mouseenter", () => {
         gsap.to(el.querySelector(".overtext"), {
@@ -73,10 +85,10 @@ const Navbar = () => {
           <div className="w-full item border-t border-b border-white h-fit relative">
             <Link to={"/work"}>
             
-            <div className="text text-center text-[6vw] uppercase">Work</div>
+            <div className="text text-center text-[12vw] lg:text-[6vw] uppercase">Work</div>
             <div className="overtext bg-[#D3FD50] w-full h-[0%] overflow-hidden absolute top-0">
               <div className="txt w-full overflow-hidden">
-                <div className="marqu whitespace-nowrap flex shrink-0 w-full items-center text-[6vw] text-black gap-20 h-full">
+                <div className="marqu whitespace-nowrap flex shrink-0 w-full items-center text-[12vw] lg:text-[6vw] text-black gap-20 h-full">
                   <p className="uppercase shrink-0">SEE Everything</p>
                   <p className="uppercase shrink-0">SEE Everything</p>
                   <p className="uppercase shrink-0">SEE Everything</p>
@@ -88,10 +100,10 @@ const Navbar = () => {
           </div>
           <div className="w-full item border-t border-b border-white h-fit relative">
              <Link to={"/agence"}>
-            <div className="text text-center text-[6vw] uppercase">Agency</div>
+            <div className="text text-center text-[12vw] lg:text-[6vw] uppercase">Agency</div>
             <div className="overtext bg-[#D3FD50] w-full h-[0%] overflow-hidden absolute top-0">
               <div className="txt w-full overflow-hidden">
-                <div className="marqu whitespace-nowrap flex shrink-0 w-full items-center text-[6vw] text-black gap-20 h-full">
+                <div className="marqu whitespace-nowrap flex shrink-0 w-full items-center text-[12vw] lg:text-[6vw] text-black gap-20 h-full">
                   <p className="uppercase shrink-0">Know us</p>
                   <p className="uppercase shrink-0">Know us</p>
                   <p className="uppercase shrink-0">Know us</p>
@@ -103,10 +115,10 @@ const Navbar = () => {
           </div>
           <div className="w-full item border-t border-b border-white h-fit relative">
              <Link to={"/"}>
-            <div className="text text-center text-[6vw] uppercase">Contact</div>
+            <div className="text text-center text-[12vw] lg:text-[6vw] uppercase">Contact</div>
             <div className="overtext bg-[#D3FD50] w-full h-[0%] overflow-hidden absolute top-0">
               <div className="txt w-full overflow-hidden">
-                <div className="marqu whitespace-nowrap flex shrink-0 w-full items-center text-[6vw] text-black gap-20 h-full">
+                <div className="marqu whitespace-nowrap flex shrink-0 w-full items-center text-[12vw] lg:text-[6vw] text-black gap-20 h-full">
                   <p className="uppercase shrink-0">Send us a fact</p>
                   <p className="uppercase shrink-0">Send us a fact</p>
                   <p className="uppercase shrink-0">Send us a fact</p>
@@ -118,10 +130,10 @@ const Navbar = () => {
           </div>
           <div className="w-full item border-t border-b border-white h-fit relative">
              <Link to={"/"}>
-            <div className="text text-center text-[6vw] uppercase">Blog</div>
+            <div className="text text-center text-[12vw] lg:text-[6vw] uppercase">Blog</div>
             <div className="overtext bg-[#D3FD50] w-full h-[0%] overflow-hidden absolute top-0">
               <div className="txt w-full overflow-hidden">
-                <div className="marqu whitespace-nowrap flex shrink-0 w-full items-center text-[6vw] text-black gap-20 h-full">
+                <div className="marqu whitespace-nowrap flex shrink-0 w-full items-center text-[12vw] lg:text-[6vw] text-black gap-20 h-full">
                   <p className="uppercase shrink-0">Read article</p>
                   <p className="uppercase shrink-0">Read article</p>
                   <p className="uppercase shrink-0">Read article</p>
@@ -133,7 +145,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="h-fit w-full z-20 absolute top-0 text-black flex justify-between items-start">
+      <div className="smallnav h-fit w-full z-20 absolute top-0 text-black flex justify-between items-start">
         <Link to={"/"} className={`logo py-2 px-4 ${location.pathname!=="/"?"":"invert"}`}>
           <img src="./k72.svg" alt="" />
         </Link >

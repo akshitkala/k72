@@ -1,5 +1,5 @@
 import React from "react";
-import Video from "../Home/video";
+import Video from "../Home/Video";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
@@ -52,13 +52,13 @@ const Home = () => {
         <div className="bottombuttons flex absolute bottom-3 left-1/2 -translate-x-1/2 gap-5">
           <Link
             to={"/Work"}
-            className="work uppercase text-[5vw] border-2 border-white lg:px-25 px-10 py-2 lg:py-0 rounded-full hover:border-[#D3FD50] hover:text-[#D3FD50] font-bold"
+            className="work uppercase text-[6vw] border-2 border-white lg:px-25 px-10 py-3 lg:py-0 rounded-full hover:border-[#D3FD50] hover:text-[#D3FD50] font-bold"
           >
             Work
           </Link>
           <Link
             to={"/Agence"}
-            className="agence uppercase text-[5vw] border-2 border-white lg:px-25 px-10  py-2 lg:py-0    rounded-full hover:border-[#D3FD50] hover:text-[#D3FD50]  font-bold"
+            className="agence uppercase text-[6vw] border-2 border-white lg:px-25 px-10  py-3 lg:py-0    rounded-full hover:border-[#D3FD50] hover:text-[#D3FD50]  font-bold"
           >
             agence
           </Link>

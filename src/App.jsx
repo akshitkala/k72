@@ -8,7 +8,7 @@ import { useGSAP } from "@gsap/react";
 import Navbar from "./components/Navbar";
 import LocomotiveScroll from "locomotive-scroll";
 import { Timeline } from "gsap/gsap-core";
-import Home from "./pages/home";
+import Home from "./pages/Home";
 
 
 
@@ -21,6 +21,7 @@ const App = () => {
       locomotivescoll.destroy(); // cleanup on unmount
     };
 }, [])
+
 
 useGSAP(()=>{
   let t1=gsap.timeline()
